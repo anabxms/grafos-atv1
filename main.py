@@ -36,19 +36,3 @@ def list_adj(node_a, graph):
 		elif (edge[1] == node_a):
 			adjs['in'].append(edge[0])
 	return adjs
-
-with open('example.json') as file:
-	graph = json.load(file)
-
-	num_nodes = count_nodes(graph['nodes'])
-	
-	num_edges = count_edges(graph['links'])
-
-	vizinho = is_adj('ser1', 'ser2', graph)
-
-	lista_adj = list_adj('ser2', graph)
-
-	print("A lista de adjacentes do node ser2 eh: ", lista_adj)
-	print("Os nodes ser1 e ser3 sao vizinhos: ", vizinho)
-	print("Numero de Nodes neste grafo eh de: ", num_nodes)
-	print("Numero de Arestas neste grafo eh de: ", num_edges)
